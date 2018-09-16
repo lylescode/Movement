@@ -19,7 +19,16 @@ class MovementViewController: UIViewController {
     }
     fileprivate var collectionViewSectionInsets: UIEdgeInsets!
     
-    fileprivate let movementItems = ["Ingredients", "Navigation Interaction, Interaction", "Search Icon", "Select Card", "3D Label Transition", "Ingredients", "Navigation Interaction", "Search Icon", "Select Card", "3D Label Transition"]
+    fileprivate let movementItems = ["Ingredients",
+                                     "Navigation Interaction",
+                                     "Search Icon",
+                                     "Select Card",
+                                     "3D Label Transition",
+                                     "Ingredients",
+                                     "Navigation Interaction",
+                                     "Search Icon",
+                                     "Select Card",
+                                     "3D Label Transition"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +65,10 @@ extension MovementViewController: UICollectionViewDataSource {
 extension MovementViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("\(#function) indexPath : \(indexPath)")
+        if movementItems[indexPath.row] == movementItems[0] {
+            let controller = Storyboard.Ingredients.instantiate(IngredientsViewController.self)
+            self.present(controller, animated: true)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
