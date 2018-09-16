@@ -97,6 +97,8 @@
 		244E82A9214E3400005999B7 /* Ingredients */ = {
 			isa = PBXGroup;
 			children = (
+				244E82D3214E8683005999B7 /* IngredientsViewController.swift */,
+				244E82D1214E8673005999B7 /* Ingredients.storyboard */,
 			);
 			path = Ingredients;
 			sourceTree = "<group>";
@@ -145,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				244E8299214E3345005999B7 /* Main.storyboard */,
-				244E82D1214E8673005999B7 /* Ingredients.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -163,7 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				244E82AE214E35D2005999B7 /* MovementViewController.swift */,
-				244E82D3214E8683005999B7 /* IngredientsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
