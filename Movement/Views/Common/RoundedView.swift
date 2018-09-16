@@ -10,20 +10,25 @@ import UIKit
 
 @IBDesignable class RoundedView: UIView {
     @IBInspectable public var cornerRadius: CGFloat = 10 {
-        didSet { self.layer.cornerRadius = cornerRadius }
+        didSet { refreshCorners(cornerRadius) }
     }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
+        renderView()
     }
     override init(frame: CGRect) {
         super.init(frame: frame)
+        renderView()
     }
     init() {
         super.init(frame: CGRect.zero)
+        renderView()
     }
-    
-    override func layoutSubviews() {
-        self.layer.cornerRadius = cornerRadius
+    private func renderView() {
+        refreshCorners(cornerRadius)
+    }
+    private func refreshCorners(_ value: CGFloat) {
+        layer.cornerRadius = value
         self.layer.masksToBounds = true
     }
 }
