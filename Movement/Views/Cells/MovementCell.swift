@@ -10,8 +10,7 @@ import UIKit
 
 class MovementCell: UICollectionViewCell {
     @IBOutlet var titleLabel: UILabel!
-    private let isPhone = UIDevice.current.userInterfaceIdiom == .phone
-    internal static var cellHeight: CGFloat {
+    public static var cellHeight: CGFloat {
         if UIDevice.current.userInterfaceIdiom == .phone {
             return 100
         } else {
@@ -19,12 +18,31 @@ class MovementCell: UICollectionViewCell {
         }
     }
     
+    public override var isHighlighted: Bool {
+        didSet {
+            if self.isHighlighted {
+                UIView.animate(withDuration: 0.45, delay: 0, options: .curveEaseOut,
+                               animations: {
+                                self.alpha = 0.87
+                                self.transform = CGAffineTransform(scaleX: 0.93, y: 0.93)
+                })
+            } else {
+                UIView.animate(withDuration: 0.45, delay: 0, options: .curveEaseInOut,
+                               animations: {
+                                self.alpha = 1
+                                self.transform = CGAffineTransform.identity
+                })
+            }
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
+    
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-        guard isPhone == true else {
+        guard UIDevice.current.userInterfaceIdiom == .phone else {
             return layoutAttributes
         }
         //setNeedsLayout()

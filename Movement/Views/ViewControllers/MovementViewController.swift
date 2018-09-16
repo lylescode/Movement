@@ -54,8 +54,11 @@ extension MovementViewController: UICollectionViewDataSource {
 
 // MARK: CollectionView delegate
 extension MovementViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("\(#function) indexPath : \(indexPath)")
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        print(#function)
         if UIDevice.current.userInterfaceIdiom == .phone {
             let cellWidth = collectionView.frame.size.width - (collectionViewSectionInsets.left + collectionViewSectionInsets.right)
             
