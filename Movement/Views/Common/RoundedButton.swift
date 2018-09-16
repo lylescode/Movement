@@ -9,21 +9,26 @@
 import UIKit
 
 @IBDesignable class RoundedButton: UIButton {
+    
     @IBInspectable public var cornerRadius: CGFloat = 10 {
-        didSet { self.layer.cornerRadius = cornerRadius }
+        didSet { refreshCorners(cornerRadius) }
     }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
+        renderButton()
     }
     override init(frame: CGRect) {
         super.init(frame: frame)
+        renderButton()
     }
     init() {
         super.init(frame: CGRect.zero)
+        renderButton()
     }
-    
-    override func layoutSubviews() {
-        self.layer.cornerRadius = cornerRadius
-        self.layer.masksToBounds = true
+    private func renderButton() {
+        refreshCorners(cornerRadius)
+    }
+    private func refreshCorners(_ value: CGFloat) {
+        layer.cornerRadius = value
     }
 }
