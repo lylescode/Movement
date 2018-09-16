@@ -12,3 +12,8 @@ extension UITableView {
         self.register(UINib(nibName: nib.rawValue, bundle: bundle), forHeaderFooterViewReuseIdentifier: nib.rawValue)
     }
 }
+extension UICollectionView {
+    public func register(nib: Nib, inBundle bundle: Bundle = .framework) {
+        self.register(UINib(nibName: nib.rawValue, bundle: bundle), forCellWithReuseIdentifier: nib.rawValue)
+    }
+}

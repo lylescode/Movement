@@ -11,13 +11,14 @@
 		244E829B214E3345005999B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244E8299214E3345005999B7 /* Main.storyboard */; };
 		244E829D214E3345005999B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 244E829C214E3345005999B7 /* Assets.xcassets */; };
 		244E82A0214E3345005999B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244E829E214E3345005999B7 /* LaunchScreen.storyboard */; };
-		244E82AB214E357C005999B7 /* MovementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244E82AA214E357C005999B7 /* MovementCell.swift */; };
 		244E82AF214E35D3005999B7 /* MovementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244E82AE214E35D2005999B7 /* MovementViewController.swift */; };
 		244E82B3214E3621005999B7 /* Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244E82B1214E3621005999B7 /* Nib.swift */; };
 		244E82B4214E3621005999B7 /* NSBundle-framework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244E82B2214E3621005999B7 /* NSBundle-framework.swift */; };
 		244E82B6214E3C61005999B7 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244E82B5214E3C61005999B7 /* RoundedView.swift */; };
 		244E82B8214E3CAC005999B7 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244E82B7214E3CAC005999B7 /* ShadowView.swift */; };
 		244E82BA214E3D80005999B7 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244E82B9214E3D80005999B7 /* AppViewModel.swift */; };
+		244E82CD214E63D1005999B7 /* MovementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244E82CB214E63D1005999B7 /* MovementCell.swift */; };
+		244E82CE214E63D1005999B7 /* MovementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244E82CC214E63D1005999B7 /* MovementCell.xib */; };
 		516C637ACFAD6E4269270460 /* Pods_Movement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5F8E74A7B65C7C09A3E376 /* Pods_Movement.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,13 +29,14 @@
 		244E829C214E3345005999B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		244E829F214E3345005999B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		244E82A1214E3345005999B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		244E82AA214E357C005999B7 /* MovementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementCell.swift; sourceTree = "<group>"; };
 		244E82AE214E35D2005999B7 /* MovementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementViewController.swift; sourceTree = "<group>"; };
 		244E82B1214E3621005999B7 /* Nib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nib.swift; sourceTree = "<group>"; };
 		244E82B2214E3621005999B7 /* NSBundle-framework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSBundle-framework.swift"; sourceTree = "<group>"; };
 		244E82B5214E3C61005999B7 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		244E82B7214E3CAC005999B7 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		244E82B9214E3D80005999B7 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		244E82CB214E63D1005999B7 /* MovementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementCell.swift; sourceTree = "<group>"; };
+		244E82CC214E63D1005999B7 /* MovementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovementCell.xib; sourceTree = "<group>"; };
 		4E5F8E74A7B65C7C09A3E376 /* Pods_Movement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Movement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E35DE7149A403875556D7420 /* Pods-Movement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movement.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Movement/Pods-Movement.debug.xcconfig"; sourceTree = "<group>"; };
 		FDD2F67376F5ACED641989E0 /* Pods-Movement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movement.release.xcconfig"; path = "Pods/Target Support Files/Pods-Movement/Pods-Movement.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,9 +116,9 @@
 			children = (
 				244E82AD214E35AC005999B7 /* Common */,
 				244E82BB214E3D88005999B7 /* ViewModels */,
-				244E82AA214E357C005999B7 /* MovementCell.swift */,
-				244E82AE214E35D2005999B7 /* MovementViewController.swift */,
-				244E8299214E3345005999B7 /* Main.storyboard */,
+				244E82C9214E605C005999B7 /* Cells */,
+				244E82CA214E6064005999B7 /* ViewControllers */,
+				244E82C8214E6044005999B7 /* Storyboards */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -127,6 +129,31 @@
 				244E82B9214E3D80005999B7 /* AppViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		244E82C8214E6044005999B7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				244E8299214E3345005999B7 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		244E82C9214E605C005999B7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				244E82CB214E63D1005999B7 /* MovementCell.swift */,
+				244E82CC214E63D1005999B7 /* MovementCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		244E82CA214E6064005999B7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				244E82AE214E35D2005999B7 /* MovementViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		566408C40E82494E91A97471 /* Pods */ = {
@@ -206,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				244E82CE214E63D1005999B7 /* MovementCell.xib in Resources */,
 				244E82A0214E3345005999B7 /* LaunchScreen.storyboard in Resources */,
 				244E829D214E3345005999B7 /* Assets.xcassets in Resources */,
 				244E829B214E3345005999B7 /* Main.storyboard in Resources */,
@@ -260,7 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				244E82AB214E357C005999B7 /* MovementCell.swift in Sources */,
+				244E82CD214E63D1005999B7 /* MovementCell.swift in Sources */,
 				244E82B3214E3621005999B7 /* Nib.swift in Sources */,
 				244E82BA214E3D80005999B7 /* AppViewModel.swift in Sources */,
 				244E82B6214E3C61005999B7 /* RoundedView.swift in Sources */,
