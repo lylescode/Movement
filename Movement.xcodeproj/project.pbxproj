@@ -23,6 +23,9 @@
 		244E82D4214E8683005999B7 /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244E82D3214E8683005999B7 /* IngredientsViewController.swift */; };
 		244E82D6214E8A36005999B7 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244E82D5214E8A36005999B7 /* RoundedButton.swift */; };
 		244E82D8214E8BB1005999B7 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244E82D7214E8BB1005999B7 /* Storyboard.swift */; };
+		245DEB87215354B7007FE462 /* IngredientTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245DEB85215354B7007FE462 /* IngredientTagCell.swift */; };
+		245DEB88215354B7007FE462 /* IngredientTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245DEB86215354B7007FE462 /* IngredientTagCell.xib */; };
+		248E656721513B470064EA33 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248E656621513B470064EA33 /* Utils.swift */; };
 		516C637ACFAD6E4269270460 /* Pods_Movement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5F8E74A7B65C7C09A3E376 /* Pods_Movement.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +48,9 @@
 		244E82D3214E8683005999B7 /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
 		244E82D5214E8A36005999B7 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		244E82D7214E8BB1005999B7 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		245DEB85215354B7007FE462 /* IngredientTagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTagCell.swift; sourceTree = "<group>"; };
+		245DEB86215354B7007FE462 /* IngredientTagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientTagCell.xib; sourceTree = "<group>"; };
+		248E656621513B470064EA33 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		4E5F8E74A7B65C7C09A3E376 /* Pods_Movement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Movement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E35DE7149A403875556D7420 /* Pods-Movement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movement.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Movement/Pods-Movement.debug.xcconfig"; sourceTree = "<group>"; };
 		FDD2F67376F5ACED641989E0 /* Pods-Movement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movement.release.xcconfig"; path = "Pods/Target Support Files/Pods-Movement/Pods-Movement.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,8 +103,9 @@
 		244E82A9214E3400005999B7 /* Ingredients */ = {
 			isa = PBXGroup;
 			children = (
-				244E82D3214E8683005999B7 /* IngredientsViewController.swift */,
-				244E82D1214E8673005999B7 /* Ingredients.storyboard */,
+				245DEB8B21535522007FE462 /* Cells */,
+				245DEB8921535508007FE462 /* Storyboards */,
+				245DEB8A21535519007FE462 /* ViewControllers */,
 			);
 			path = Ingredients;
 			sourceTree = "<group>";
@@ -109,6 +116,7 @@
 				244E82B1214E3621005999B7 /* Nib.swift */,
 				244E82B2214E3621005999B7 /* NSBundle-framework.swift */,
 				244E82D7214E8BB1005999B7 /* Storyboard.swift */,
+				248E656621513B470064EA33 /* Utils.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -168,6 +176,31 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		245DEB8921535508007FE462 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				244E82D1214E8673005999B7 /* Ingredients.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		245DEB8A21535519007FE462 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				244E82D3214E8683005999B7 /* IngredientsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		245DEB8B21535522007FE462 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				245DEB85215354B7007FE462 /* IngredientTagCell.swift */,
+				245DEB86215354B7007FE462 /* IngredientTagCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		566408C40E82494E91A97471 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +252,7 @@
 				TargetAttributes = {
 					244E8291214E3345005999B7 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -248,6 +282,7 @@
 				244E82CE214E63D1005999B7 /* MovementCell.xib in Resources */,
 				244E82A0214E3345005999B7 /* LaunchScreen.storyboard in Resources */,
 				244E829D214E3345005999B7 /* Assets.xcassets in Resources */,
+				245DEB88215354B7007FE462 /* IngredientTagCell.xib in Resources */,
 				244E829B214E3345005999B7 /* Main.storyboard in Resources */,
 				244E82D2214E8673005999B7 /* Ingredients.storyboard in Resources */,
 			);
@@ -301,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				245DEB87215354B7007FE462 /* IngredientTagCell.swift in Sources */,
 				244E82CD214E63D1005999B7 /* MovementCell.swift in Sources */,
 				244E82D8214E8BB1005999B7 /* Storyboard.swift in Sources */,
 				244E82D6214E8A36005999B7 /* RoundedButton.swift in Sources */,
@@ -312,6 +348,7 @@
 				244E82D4214E8683005999B7 /* IngredientsViewController.swift in Sources */,
 				244E82B4214E3621005999B7 /* NSBundle-framework.swift in Sources */,
 				244E82B8214E3CAC005999B7 /* ShadowView.swift in Sources */,
+				248E656721513B470064EA33 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,7 +502,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.rawsmith.Movement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -484,7 +521,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.rawsmith.Movement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
