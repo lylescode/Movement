@@ -30,6 +30,11 @@
 		24C01C1C2160920800B2CB48 /* AutoLayout+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C01C1B2160920800B2CB48 /* AutoLayout+Extensions.swift */; };
 		24C01C1E2160921B00B2CB48 /* Bool+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C01C1D2160921B00B2CB48 /* Bool+Extensions.swift */; };
 		24C01C20216092A800B2CB48 /* UIWindow+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C01C1F216092A800B2CB48 /* UIWindow+Extensions.swift */; };
+		24C01C292160C9B600B2CB48 /* PullUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24C01C282160C9B600B2CB48 /* PullUp.storyboard */; };
+		24C01C2B2160CBA000B2CB48 /* PullUpBelowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C01C2A2160CBA000B2CB48 /* PullUpBelowViewController.swift */; };
+		24C01C2D2160CBA600B2CB48 /* PullUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C01C2C2160CBA600B2CB48 /* PullUpViewController.swift */; };
+		24C01C2F2160CE1700B2CB48 /* PullUpPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C01C2E2160CE1700B2CB48 /* PullUpPresentationController.swift */; };
+		24C01C312160CE2800B2CB48 /* PullUpTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C01C302160CE2800B2CB48 /* PullUpTransitionAnimator.swift */; };
 		516C637ACFAD6E4269270460 /* Pods_Movement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5F8E74A7B65C7C09A3E376 /* Pods_Movement.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +64,11 @@
 		24C01C1B2160920800B2CB48 /* AutoLayout+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AutoLayout+Extensions.swift"; sourceTree = "<group>"; };
 		24C01C1D2160921B00B2CB48 /* Bool+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Extensions.swift"; sourceTree = "<group>"; };
 		24C01C1F216092A800B2CB48 /* UIWindow+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extensions.swift"; sourceTree = "<group>"; };
+		24C01C282160C9B600B2CB48 /* PullUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PullUp.storyboard; sourceTree = "<group>"; };
+		24C01C2A2160CBA000B2CB48 /* PullUpBelowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpBelowViewController.swift; sourceTree = "<group>"; };
+		24C01C2C2160CBA600B2CB48 /* PullUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpViewController.swift; sourceTree = "<group>"; };
+		24C01C2E2160CE1700B2CB48 /* PullUpPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpPresentationController.swift; sourceTree = "<group>"; };
+		24C01C302160CE2800B2CB48 /* PullUpTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpTransitionAnimator.swift; sourceTree = "<group>"; };
 		4E5F8E74A7B65C7C09A3E376 /* Pods_Movement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Movement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E35DE7149A403875556D7420 /* Pods-Movement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movement.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Movement/Pods-Movement.debug.xcconfig"; sourceTree = "<group>"; };
 		FDD2F67376F5ACED641989E0 /* Pods-Movement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movement.release.xcconfig"; path = "Pods/Target Support Files/Pods-Movement/Pods-Movement.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,13 +108,15 @@
 			isa = PBXGroup;
 			children = (
 				24C01C182160918700B2CB48 /* Helpers */,
+				244E82B1214E3621005999B7 /* Nib.swift */,
+				244E82D7214E8BB1005999B7 /* Storyboard.swift */,
+				24C01C262160C8DD00B2CB48 /* Main */,
+				24C01C212160C83500B2CB48 /* PullUp */,
+				244E82A9214E3400005999B7 /* Ingredients */,
 				244E82A1214E3345005999B7 /* Info.plist */,
 				244E8295214E3345005999B7 /* AppDelegate.swift */,
 				244E829C214E3345005999B7 /* Assets.xcassets */,
 				244E829E214E3345005999B7 /* LaunchScreen.storyboard */,
-				244E82AC214E35A2005999B7 /* Library */,
-				244E82B0214E35E5005999B7 /* Views */,
-				244E82A9214E3400005999B7 /* Ingredients */,
 			);
 			path = Movement;
 			sourceTree = "<group>";
@@ -119,15 +131,6 @@
 			path = Ingredients;
 			sourceTree = "<group>";
 		};
-		244E82AC214E35A2005999B7 /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				244E82B1214E3621005999B7 /* Nib.swift */,
-				244E82D7214E8BB1005999B7 /* Storyboard.swift */,
-			);
-			path = Library;
-			sourceTree = "<group>";
-		};
 		244E82AD214E35AC005999B7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,18 +139,6 @@
 				244E82B7214E3CAC005999B7 /* ShadowView.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		244E82B0214E35E5005999B7 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				244E82AD214E35AC005999B7 /* Common */,
-				244E82BB214E3D88005999B7 /* ViewModels */,
-				244E82C9214E605C005999B7 /* Cells */,
-				244E82CA214E6064005999B7 /* ViewControllers */,
-				244E82C8214E6044005999B7 /* Storyboards */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		244E82BB214E3D88005999B7 /* ViewModels */ = {
@@ -219,6 +210,54 @@
 				24C01C1F216092A800B2CB48 /* UIWindow+Extensions.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		24C01C212160C83500B2CB48 /* PullUp */ = {
+			isa = PBXGroup;
+			children = (
+				24C01C272160C9A500B2CB48 /* Storyboards */,
+				24C01C232160C8AA00B2CB48 /* Presentation */,
+				24C01C222160C8A400B2CB48 /* ViewControllers */,
+			);
+			path = PullUp;
+			sourceTree = "<group>";
+		};
+		24C01C222160C8A400B2CB48 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				24C01C2A2160CBA000B2CB48 /* PullUpBelowViewController.swift */,
+				24C01C2C2160CBA600B2CB48 /* PullUpViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		24C01C232160C8AA00B2CB48 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				24C01C2E2160CE1700B2CB48 /* PullUpPresentationController.swift */,
+				24C01C302160CE2800B2CB48 /* PullUpTransitionAnimator.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		24C01C262160C8DD00B2CB48 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				244E82AD214E35AC005999B7 /* Common */,
+				244E82C9214E605C005999B7 /* Cells */,
+				244E82C8214E6044005999B7 /* Storyboards */,
+				244E82CA214E6064005999B7 /* ViewControllers */,
+				244E82BB214E3D88005999B7 /* ViewModels */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		24C01C272160C9A500B2CB48 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				24C01C282160C9B600B2CB48 /* PullUp.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		566408C40E82494E91A97471 /* Pods */ = {
@@ -305,6 +344,7 @@
 				245DEB88215354B7007FE462 /* IngredientTagCell.xib in Resources */,
 				244E829B214E3345005999B7 /* Main.storyboard in Resources */,
 				244E82D2214E8673005999B7 /* Ingredients.storyboard in Resources */,
+				24C01C292160C9B600B2CB48 /* PullUp.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,11 +407,15 @@
 				24C01C1E2160921B00B2CB48 /* Bool+Extensions.swift in Sources */,
 				24C01C1C2160920800B2CB48 /* AutoLayout+Extensions.swift in Sources */,
 				244E82B6214E3C61005999B7 /* RoundedView.swift in Sources */,
+				24C01C2F2160CE1700B2CB48 /* PullUpPresentationController.swift in Sources */,
 				244E82AF214E35D3005999B7 /* MovementViewController.swift in Sources */,
+				24C01C312160CE2800B2CB48 /* PullUpTransitionAnimator.swift in Sources */,
 				244E8296214E3345005999B7 /* AppDelegate.swift in Sources */,
 				244E82D4214E8683005999B7 /* IngredientsViewController.swift in Sources */,
 				244E82B4214E3621005999B7 /* NSBundle-framework.swift in Sources */,
 				244E82B8214E3CAC005999B7 /* ShadowView.swift in Sources */,
+				24C01C2D2160CBA600B2CB48 /* PullUpViewController.swift in Sources */,
+				24C01C2B2160CBA000B2CB48 /* PullUpBelowViewController.swift in Sources */,
 				248E656721513B470064EA33 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

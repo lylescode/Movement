@@ -10,6 +10,7 @@ import UIKit
 
 public enum Storyboard: String {
     case Main
+    case PullUp
     case Ingredients
     
     public func instantiate<VC: UIViewController>(_ viewController: VC.Type,

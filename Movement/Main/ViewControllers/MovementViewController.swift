@@ -19,11 +19,7 @@ class MovementViewController: UIViewController {
     }
     fileprivate var collectionViewSectionInsets: UIEdgeInsets!
     
-    fileprivate let movementItems = ["Ingredients",
-                                     "Navigation Interaction",
-                                     "Search Icon",
-                                     "Select Card",
-                                     "3D Label Transition",
+    fileprivate let movementItems = ["Pull Up",
                                      "Ingredients",
                                      "Navigation Interaction",
                                      "Search Icon",
@@ -33,6 +29,7 @@ class MovementViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionViewLayout()
+        
     }
     
     func setupCollectionViewLayout() {
@@ -71,17 +68,23 @@ extension MovementViewController: UICollectionViewDelegate {
         }
     }
     
+}
+
+// MARK: CollectionView FlowLayout delegate
+extension MovementViewController: UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if UIDevice.current.userInterfaceIdiom == .phone {
             let cellWidth = collectionView.frame.size.width - (collectionViewSectionInsets.left + collectionViewSectionInsets.right)
             
+            print("collectionView collectionViewLayout cellWidth : \(cellWidth)")
             return CGSize(width: cellWidth, height: MovementCell.cellHeight)
             /*
-            if UIDevice.current.orientation == .portrait {
-                return CGSize(width: cellWidth, height: MovementCell.cellHeight)
-            } else {
-                return CGSize(width: cellWidth / 2, height: MovementCell.cellHeight)
-            }*/
+             if UIDevice.current.orientation == .portrait {
+             return CGSize(width: cellWidth, height: MovementCell.cellHeight)
+             } else {
+             return CGSize(width: cellWidth / 2, height: MovementCell.cellHeight)
+             }*/
         } else {
             let numberOfItemsInRow = 2
             let rowNumber = indexPath.item / numberOfItemsInRow
@@ -103,9 +106,4 @@ extension MovementViewController: UICollectionViewDelegate {
             return CGSize(width: cellWidth, height: MovementCell.cellHeight)
         }
     }
-}
-
-// MARK: CollectionView FlowLayout delegate
-extension MovementViewController: UICollectionViewDelegateFlowLayout {
-    
 }
